@@ -7,15 +7,15 @@
     tools:context=".ui.MainActivity">
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/currentSong"
+        android:id="@+id/viewPagerSongs"
         android:layout_width="0dp"
         android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageViewPlayPause"
-        app:layout_constraintStart_toEndOf="@+id/imageViewSongImage" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewCurrentSong" />
 
     <ImageView
-        android:id="@+id/imageViewSongImage"
+        android:id="@+id/imageViewCurrentSong"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:scaleType="centerCrop"
@@ -34,7 +34,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment"
+        android:id="@+id/navHostFragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
