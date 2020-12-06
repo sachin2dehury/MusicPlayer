@@ -77,12 +77,12 @@ class FireBaseMusicSource @Inject constructor(
     }.toMutableList()
 
     fun whenReady(action: (Boolean) -> Unit): Boolean {
-        if (state == State.STATE_CREATED || state == State.STATE_INITIALIZING) {
+        return if (state == State.STATE_CREATED || state == State.STATE_INITIALIZING) {
             onReadyListener += action
-            return false
+            false
         } else {
             action(state == State.STATE_INITIALIZED)
-            return true
+            true
         }
     }
 }

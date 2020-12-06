@@ -14,4 +14,6 @@ object Constants {
     const val NETWORK_ERROR = "NETWORK_ERROR"
 
     const val UPDATE_PLAYER_POSITION_INTERVAL = 100L
+
+    const val UNKNOWN_ERROR = "An unknown error occurred."
 }
