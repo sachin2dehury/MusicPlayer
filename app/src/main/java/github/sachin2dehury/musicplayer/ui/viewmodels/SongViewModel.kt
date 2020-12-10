@@ -25,7 +25,7 @@ class SongViewModel @ViewModelInject constructor(
     val currentPlayerPosition: LiveData<Long> = _currentPlayerPosition
 
     init {
-
+        updateCurrentPlayerPosition()
     }
 
     private fun updateCurrentPlayerPosition() {

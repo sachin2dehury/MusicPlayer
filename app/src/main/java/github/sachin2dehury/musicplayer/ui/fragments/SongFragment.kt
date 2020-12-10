@@ -42,6 +42,8 @@ class SongFragment : Fragment(R.layout.fragment_song) {
 
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
 
+        subscribeToObserver()
+
         imageViewPlayPauseDetails.setOnClickListener {
             currentPlayingSong?.let { song ->
                 mainViewModel.playOrToggleSong(song, true)
